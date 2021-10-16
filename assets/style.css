@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --dark: #01161E;
+    --light: #F4F9E9;
+    --blue: #0081A7;
+    --yellow: #e6be0a;
+    --fGlobal: 'Raleway', sans-serif;
+    --fText: 'Merriweather', serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    max-width: 100%;
+    background-color: var(--light);
+    font-family: var(--fGlobal);
+}
+nav{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-family: var(--fGlobal);
+    font-weight: 800;
+    box-shadow: 0 0 6px -2px var(--blue);
+    background-color: var(--light);
+    color: var(--dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+    z-index: 10000;
+}
+nav.scrolling{
+    height: 10vh;
+    font-size: 36px;
+    background-color: var(--dark);
+    color: var(--light);
+    box-shadow: none;
+}
+.main{
+    width: 100%;
+    margin-top: 12vh;
+    padding: 40px 100px;
+}
+.cardHolder{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 350px;
+    height: auto;
+    box-shadow: 0 1px 4px #01161E50;
+    border-radius: 8px;
+    margin: 0 16px;
+    margin-bottom: 40px;
+    background-color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out; 
+}
+.card a{
+    text-decoration: none;
+}
+.imgHolder{
+    width: 350px;
+    height: 160px;
+    border-radius: 8px;
+}
+.imgHolder img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+}
+.cardText{
+    padding: 12px;
+    width: 350px;
+    text-align: center;
+    color: var(--yellow);
+    font-size: 24px;
+    font-family: var(--fText);
+    font-weight: 600;
+}
+.card:hover{
+    transform: scale(1.03) !important;
+    box-shadow: 0 2px 8px -1px #01161E70;
+}
+footer{
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 40px 80px;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.footerImg{
+    width: 300px;
+    height: 300px;
+}
+.footerImg img{
+    width: 100%;
+}
+.footerText{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--light);
+}
+.footerText span{
+    font-size: 28px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+/* Footer contact button */
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container p{
+    font-family: var(--fText);
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--yellow);
+    position: absolute;
+    transform: translateY(-70px);
+    transition: all 0.4s ease-in-out;
+}
+.container.containerOpen p{
+    transform: translateY(-170px);
+    opacity: 0;
+}
+.box{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease-in-out;
+    background-color: var(--blue);
+    clip-path: circle(30px);
+    overflow: visible;
+}
+.cont{
+    padding: 24px;
+    background-color: var(--blue);
+    color: var(--light);
+    border-radius: 6px;
+    font-size: 30px;
+    clip-path: circle(40%);
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+.box.boxOpen{
+    clip-path: circle(145px);
+    box-shadow: inset 0 0 0 150px var(--blue);
+}
+.box.boxOpen .cont{
+    transform: rotateZ(45deg);
+    background-color: var(--light);
+    color: var(--blue);
+}
+.icons{
+    z-index: 5;
+    position: absolute;
+    padding: 20px;
+    font-size: 26px;
+    clip-path: circle(40%);
+    transition: all 0.2s ease;
+    background-color: var(--dark);
+    color: var(--yellow);
+    opacity: 0;
+}
+.portfolio{
+    transform: translateX(0px) translateY(-110px);
+}
+.insta{
+    transform: translateX(95px) translateY(50px);
+}
+.twitter{
+    transform: translateX(95px) translateY(-50px);
+}
+.github{
+    transform: translateX(-95px) translateY(-50px);
+}
+.linkedin{
+    transform: translateX(-95px) translateY(50px);
+}
+.mail{
+    transform: translateX(0px) translateY(110px);
+}
+.icons:hover{
+    color: var(--light);
+}
+.box.boxOpen .icons{
+    opacity: 1;
+}
+/* Footer contact button */
+
+@media screen and (max-width: 1024px){
+    .footerImg{
+        width: 220px;
+        height: 220px;
+    }
+    .footerText{
+        font-size: 32px;
+    }
+    .footerText span{
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 768px){
+    nav{
+        text-align: center;
+        font-size: 28px;
+        height: 10vh;
+    }
+    nav.scrolling{
+        font-size: 24px;
+        height: 8vh;
+    }
+    .main{
+        margin-top: 10vh;
+        padding: 40px 0;
+    }
+    footer{
+        flex-direction: column;
+        padding: 24px 12px;
+    }
+    .footerImg{
+        width: 200px;
+        height: 200px;
+    }
+    .footerText{
+        font-size: 32px;
+        padding: 24px 0;
+    }
+    .footerText span , .container p{
+        font-size: 22px;
+    }
+    .container.containerOpen p{
+        transform: translateY(-120px);
+        opacity: 0;
+    }
+    .box{
+        width: 240px;
+        height: 240px;
+    }
+    .box.boxOpen{
+        clip-path: circle(116px);
+    }
+    .cont{
+        font-size: 24px;
+        padding: 19px;
+    }
+    .icons{
+        font-size: 21px;
+        padding: 16px;
+    }
+    .portfolio{
+        transform: translateX(0px) translateY(-88px);
+    }
+    .insta{
+        transform: translateX(76px) translateY(40px);
+    }
+    .twitter{
+        transform: translateX(76px) translateY(-40px);
+    }
+    .github{
+        transform: translateX(-76px) translateY(-40px);
+    }
+    .linkedin{
+        transform: translateX(-76px) translateY(40px);
+    }
+    .mail{
+        transform: translateX(0px) translateY(88px);
+    }
+}
+@media screen and (max-width: 320px){
+    body{
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+    nav{
+        font-size: 22px;
+        width: 320px;
+    }
+    .card{
+        width: 300px;
+        margin: 0 10px;
+        margin-bottom: 40px;
+    }
+    .card a{
+        width: 300px;
+    }
+    .imgHolder{
+        width: 300px;
+        height: 137px;
+        margin: 0;
+    }
+    .cardText{
+        width: 300px;
+    }
+}
