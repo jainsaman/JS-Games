@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=PT+Serif:wght@400;700&display=swap');
+
+:root{
+    --dark: #1C232D;
+    --light: #EEE9E6;
+    --grey: #46474B;
+    --orange: #F48B0C;
+    --fGlobal: 'DM Sans', sans-serif;
+    --fText: 'PT Serif', serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    max-width: 100%;
+    position: relative;
+    font-family: var(--fGlobal);
+    background-color: var(--dark);
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px 0 var(--grey);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+
+
+
+
+
+
+
+
+
+.home{
+    background-color: var(--light);
+    color: var(--grey);
+}
